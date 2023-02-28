@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/estiloscss.css">
+
+  <title>Tienda Zen OA</title>
+  <script src="./main.js"></script>
+</head>
+
+<body>
+
+  <!-- AQUI VA EL ENCABEZADO -->
+  <header class="container-fluid bg-primary d-flex justify-content-center">
+    <p class="text-light my-0 p-2 fs-5">
+      Contáctanos: +(57) 300 567 264 2
+    </p>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light estiloa m-3">
+    <div class="container-fluid">
+      <img class="logo-small me-5" src="./multimedia/imagenes/logob.JPG" alt="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item m">
+            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ropa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artículos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Clases</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Escribe aquí para buscar" aria-label="Search">
+          <button class="btn btn-primary btn-primary-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <main>
+
+    <div class="contenedormain">
+      <h1>UNA VIDA <span>ZEN</span> 
+      </h1>
+      <p>Ropa, articulos de meditación y clases de yoga.
+      </p>
+    </div>
+
+    <!-- Aqui va un slider de imagenes -->
+    <div class="contenedormain">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner " id="innerslide">
+          <div class="carousel-item active">
+            <img src="./multimedia/imagenes/slider/slider1.jpg" class="d-block " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./multimedia/imagenes/slider/slider2.jpg" class="d-block  " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./multimedia/imagenes/slider/slider3.jpg" class="d-block  " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="contenedormain">
+      <h2>“Cuando algo viene de dentro, cuando es una parte de ti, no tienes opción sino de vivírlo, de expresarlo.”
+      </h2>
+      <p>Kamal Ravikant</p>
+    </div>
+  </main>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <footer class="container-fluid bg-primary d-flex justify-content-center align-items-center my-0 ">
+    <div class="contenedorfooter m-3">
+      <p class="text-light my-0 p-2 fs-5">
+        Sígunenos en nuestras redes:
+      </p>
+    </div>
+    <div class="contenedorfooter m-3">
+      <a class="nav-link active" aria-current="page" href="">Facebook</a>
+    </div>
+    <div class="contenedorfooter m-3">
+      <a class="nav-link active" aria-current="page" href="">Instagram</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

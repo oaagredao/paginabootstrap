@@ -1,0 +1,106 @@
+/*Importar las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Mandali&family=Ubuntu:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    /*Esto se asegura de que si hay objetos grandes, no se desborden en el eje x*/
+}
+
+
+
+
+/*Aqui voy a cambiar el estilo de los links a del nav*/
+.estiloa li a {
+    font-size: 1.2em !important;
+    /*Le coloqué important porque bootstrap tiene prioridad*/
+    font-weight: bold;
+    /*negrita*/
+}
+
+.estiloa form button {
+    font-size: 1.2em !important;
+    /*Le coloqué important porque bootstrap tiene prioridad*/
+    font-weight: bold;
+    /*negrita*/
+}
+
+/*Aqui voy a colocar el css del logo de la navbar*/
+.logo-small {
+    max-width: 25%;
+    height: auto;
+    min-width: 25%;
+}
+
+/*Aqui se va a adecuar el tamaño de las imagenes del slider*/
+.carousel-inner {
+    width: 100%;
+    height: 15rem; 
+}
+
+#innerslide {
+    width: 100%; 
+}
+
+.carousel-inner div img {
+    width: 100%;
+
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 0,5rem;
+    
+}
+
+.contenedormain {
+    width: 100%;
+    margin: 2rem;
+}
+
+
+/*Tamaño de la frase que está en el index*/
+
+
+div h1 {
+    font-size: 4vw !important;
+    text-align: center;
+}
+
+.contenedormain span{
+    color: rgb(74, 138, 233);
+}
+
+.contenedormain p {
+    font-size: 2vw !important;
+    text-align: center;
+}
+
+footer div a {
+    font-size: 1.5vw !important;
+    /*Le coloqué important porque bootstrap tiene prioridad*/
+    font-weight: bold;
+    /*negrita*/
+    color: white !important;
+}
+.contenedormain h2{
+    font-size: 3vw !important;
+    text-align: center;
+}
+
+/*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
+@media (min-width: 992px) {
+    main {
+        min-height: 650px;
+    }
+}
