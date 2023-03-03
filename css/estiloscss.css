@@ -5,16 +5,16 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
+
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     /*Esto se asegura de que si hay objetos grandes, no se desborden en el eje x*/
+    max-width: 1500px;
 }
-
-
-
 
 /*Aqui voy a cambiar el estilo de los links a del nav*/
 .estiloa li a {
@@ -33,68 +33,108 @@ body {
 
 /*Aqui voy a colocar el css del logo de la navbar*/
 .logo-small {
-    max-width: 25%;
+    max-width: 40%;
     height: auto;
-    min-width: 25%;
+    min-width: 35%;
 }
 
 /*Aqui se va a adecuar el tamaño de las imagenes del slider*/
 .carousel-inner {
     width: 100%;
-    height: 15rem; 
+    height: 15rem;
+    max-width: 900px;
 }
 
 #innerslide {
-    width: 100%; 
+    width: 100%;
+    height: 15rem;
 }
 
 .carousel-inner div img {
     width: 100%;
-
+    max-height: 15rem;
 }
+
+/*Hasta aca va lo del slider del index*/
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-    padding: 0,5rem;
-    
+    max-width: 1500px;
+    padding: 0, 5rem;
 }
 
 .contenedormain {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 2rem;
+    align-items: center;
+}
+
+/*Contenedores de porque meditar index*/
+.contenedormain2 {
+    display: flex;
+    width: 100%;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.contenedorhijo1 {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    justify-content: center;
+    
+}
+.contenedorhijo1 span {
+    color: rgb(74, 138, 233);
+
+}
+
+.contenedorhijo1 img {
+    width: 100%;
+    height: auto;
 }
 
 
-/*Tamaño de la frase que está en el index*/
+/*Clase contenedor que da el borde inferior azul*/
+.contenedormainbordeinferior {
+    padding-bottom: 5rem;
+    border-bottom: 50px solid rgb(27, 137, 240);
 
+}
+
+/*Desde aqui se modifica el tamaño de las letras H1 h2 p*/
 
 div h1 {
-    font-size: 4vw !important;
+    font-size: 5vw !important;
     text-align: center;
 }
 
-.contenedormain span{
+.contenedormain span {
     color: rgb(74, 138, 233);
 }
 
-.contenedormain p {
-    font-size: 2vw !important;
+div p {
+    font-size: 2.4vw !important;
     text-align: center;
 }
 
 footer div a {
-    font-size: 1.5vw !important;
+    font-size: 2.5vw !important;
     /*Le coloqué important porque bootstrap tiene prioridad*/
     font-weight: bold;
     /*negrita*/
     color: white !important;
 }
-.contenedormain h2{
-    font-size: 3vw !important;
+
+div h2 {
+    font-size: 2.8vw ;
     text-align: center;
 }
 
@@ -102,5 +142,17 @@ footer div a {
 @media (min-width: 992px) {
     main {
         min-height: 650px;
+    }
+    .logo-small {
+        max-width: 20%;
+        height: auto;
+        min-width: 15%;
+    }
+    .contenedormain2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    footer div a {
+        font-size: 1.5vw;
     }
 }
