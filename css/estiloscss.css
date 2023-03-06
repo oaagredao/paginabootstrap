@@ -6,19 +6,19 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-
 }
-
-
-
 
 body {
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     /*Esto se asegura de que si hay objetos grandes, no se desborden en el eje x*/
     max-width: 1500px;
-    background-color: #edf2fb;
-    background-image: linear-gradient(to right, #edf2fb 0%, #b6d4fe 35%, #89c0ff 50%, #4dabf7 65%, #3498db 100%);
+    background-color: #E8F6F8;
+    background-image: linear-gradient(135deg, #E8F6F8 25%, #BCE3E7 50%, #8ED0D3 75%);
+}
+
+a {
+    text-decoration: none;
 }
 
 /*Aqui voy a cambiar el estilo de los links a del nav*/
@@ -43,24 +43,6 @@ body {
     min-width: 35%;
 }
 
-/*Aqui se va a adecuar el tamaño de las imagenes del slider*/
-.carousel-inner {
-    width: 100%;
-    height: 15rem;
-    max-width: 900px;
-}
-
-#innerslide {
-    width: 100%;
-    height: 15rem;
-}
-
-.carousel-inner div img {
-    width: 100%;
-    max-height: 15rem;
-}
-
-/*Hasta aca va lo del slider del index*/
 
 main {
     display: flex;
@@ -69,17 +51,19 @@ main {
     align-items: center;
     max-width: 1500px;
     padding: 0, 5rem;
+    margin-bottom: 8rem;
 }
 
+/*Contenedor que agrupa contenedores en columna, usado como contenedor principal de main*/
 .contenedormain {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 2rem;
+    margin: 8vw 5vw;
     align-items: center;
 }
 
-/*Contenedores de porque meditar index*/
+/*Contenedores de porque meditar index, contenedor principal de main que agrupa en la misma fila*/
 .contenedormain2 {
     display: flex;
     width: 100%;
@@ -89,13 +73,15 @@ main {
     flex-wrap: nowrap;
 }
 
+/*Contenedor hijo que agrupa elementos en columna*/
 .contenedorhijo1 {
     display: flex;
     flex-direction: column;
     margin: 50px;
     justify-content: center;
-    
+
 }
+
 .contenedorhijo1 span {
     color: rgb(74, 138, 233);
 
@@ -108,42 +94,119 @@ main {
 }
 
 
-.contenedorhijo1 img.banneryoga{
+.contenedorhijo1 img.banneryoga {
     width: 100%;
     height: auto;
-    max-height: 2200px;
+    max-height: 1700px;
 }
 
-/*Colocaré los contenedores grid para la pagina ropa*/
-
-.contenedormaingrid{
+/*Colocaré los contenedores  para la pagina ropa*/
+/*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
+.contenedormaingrid {
     display: grid;
-    grid-template-columns: 2fr 3fr; /*el primer hijo ocupará 33% y el segundo un 66%*/
+    grid-template-columns: 2fr 3fr;
+    /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
     width: 100%;
     max-height: 100%;
     height: 50rem;
 }
 
-.contenedormaingridhijo1{
+/*Contenedor que tiene el titulo de ropa, agrupa en columna*/
+.gridhijo1 {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(202, 225, 247);
+    background: linear-gradient(to bottom, #ffffff, #f8a5c2);
     justify-content: center;
 }
-.contenedormaingridhijo1 h1{
-align-self: center;
+
+.gridhijo1 h1 {
+    align-self: center;
+}
+
+/*contenedor que agrupa elementos en columna, pero tendrá más contenedores*/
+.gridhijo2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Este es el contenedor que contiene a las imagenes de top, shorts y pantalones*/
+.contenedorropa {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+.contenedorropa h2 {
+    color: rgb(12, 12, 12);
 }
 
 
-.contenedormaingridhijo2{
+.contenedorropa img {
+    max-width: 350px;
+    max-height: 300px;
+    width: 25vw;
+    height: auto;
 }
+
+/*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
+.contenedorropa1 {
+    background: linear-gradient(to left, #ffffff, #a4d1f5);
+}
+
+/*Aqui haré los contenedores para agrupar las imagenes de ropa en dos columnas*/
+.contenedortops {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+/*Le coloco color de fonto al titulo de tops en la seccion tops*/
+.colorfondotitulotop {
+    background-color: #f8a5c2;
+}
+/*Le coloco color de fonto al titulo de joggers en la seccion joggers*/
+.colorfondotitulojogger {
+    background-color: #8ED0D3;
+}
+
+/*Le daré aqui estilo a las imagenes de los tops de ropa*/
+.contenedortops img {
+    max-width: 350px;
+    max-height: 300px;
+    width: 25vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/*Contenedor con un color de fondo asignado a los tops de ropa*/
+.contenedortopsbackgroundcolor {
+    background-color: #f7f7f7;
+    /* blanco */
+    background-image: radial-gradient(circle at 20% 50%, #b8e0e9, #b8e0e9 60%, rgba(248, 165, 194, 0.5) 70%, rgba(248, 165, 194, 0.1));
+    /* gradiente radial */
+    padding: 3vw;
+}
+
+/*Contenedor con un color de fondo asignado a los pantalones de ropa*/
+.contenedorpantalonbackgroundcolor {
+    background-color: #f8a5c2;
+    /* rosa claro */
+    background-image: radial-gradient(circle at 20% 50%, rgba(184, 224, 233, 0.1), rgba(184, 224, 233, 0.5) 60%, #b8e0e9 70%, #b8e0e9);
+    /* gradiente radial */
+    padding: 3vw;
+}
+
+
+
 
 
 /*Clase contenedor que da el borde inferior azul*/
 .contenedormainbordeinferior {
     padding-bottom: 5rem;
     border-bottom: 50px solid rgb(27, 137, 240);
-
 }
 
 /*Desde aqui se modifica el tamaño de las letras H1 h2 p*/
@@ -163,7 +226,7 @@ div p {
 }
 
 footer div a {
-    font-size: 2.5vw !important;
+    font-size: 1.8vw !important;
     /*Le coloqué important porque bootstrap tiene prioridad*/
     font-weight: bold;
     /*negrita*/
@@ -171,7 +234,7 @@ footer div a {
 }
 
 div h2 {
-    font-size: 2.8vw ;
+    font-size: 2.8vw;
     text-align: center;
 }
 
@@ -180,15 +243,18 @@ div h2 {
     main {
         min-height: 650px;
     }
+
     .logo-small {
         max-width: 20%;
         height: auto;
         min-width: 15%;
     }
+
     .contenedormain2 {
         display: flex;
         flex-wrap: nowrap;
     }
+
     footer div a {
         font-size: 1.5vw;
     }
