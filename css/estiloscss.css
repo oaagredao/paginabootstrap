@@ -54,6 +54,34 @@ main {
     margin-bottom: 8rem;
 }
 
+/*Estilos del boton que sube hasta el top*/
+#btn-volver-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 2px;
+    background-color: white;
+    border: 2px solid skyblue;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 20px;
+    height: 20px;
+    /*Mueve el texto en eje y*/
+    line-height: 5px;
+    /*Mueve el texto en eje x*/
+    text-indent: -30px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid skyblue;
+}
+#btn-volver-arriba:hover {
+    background-color: #f3729f;
+    color: white;
+}
+
 /*Contenedor que agrupa contenedores en columna, usado como contenedor principal de main*/
 .contenedormain {
     display: flex;
@@ -167,6 +195,7 @@ main {
 .colorfondotitulotop {
     background-color: #f8a5c2;
 }
+
 /*Le coloco color de fonto al titulo de joggers en la seccion joggers*/
 .colorfondotitulojogger {
     background-color: #8ED0D3;
