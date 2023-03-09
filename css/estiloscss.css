@@ -20,6 +20,10 @@ body {
 }.bodybackgroundcolor2{
     background-image: linear-gradient(135deg, #FFF3F1 0%, #FFF3F1 25%, #F8C4BE 50%, #FFF3F1 75%, #FFF3F1 100%);
 }
+/*Color de fondo del h2*/
+.colorh2{
+    background-color: #fab9d0;
+}
 
 a {
     text-decoration: none;
@@ -58,12 +62,14 @@ main {
     margin-bottom: 8rem;
 }
 
+
+
 /*Contenedor que agrupa contenedores en columna, usado como contenedor principal de main*/
 .contenedormain {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 5vw 5vw;
+    margin: 5vw 0vw;
 }
 .contenedormainsinmargin{
     display: flex;
@@ -88,9 +94,7 @@ main {
     height: auto;
     max-height: 1700px;
 }
-.colorh2{
-    background-color: #fab9d0;
-}
+
 
 /*Contenedores de porque meditar index, contenedor principal de main que agrupa en la misma fila*/
 .contenedormain2 {
@@ -107,22 +111,24 @@ main {
     flex-direction: column;
     margin: 50px;
     justify-content: center;
-
 }
 .contenedorhijo1 span {
     color: rgb(74, 138, 233);
+}
+main div img{
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+main div a img{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
 
-}
-.contenedorhijo1 img {
-    width: 100%;
-    height: auto;
-    max-height: 1700px;
-}
-.contenedorhijo1 img.banneryoga {
-    width: 100%;
-    height: auto;
-    max-height: 1700px;
-}
+
 /*Colocaré los contenedores  para la pagina ropa*/
 /*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
 .contenedormaingrid {
@@ -140,17 +146,14 @@ main {
     background: linear-gradient(to bottom, #ffffff, #f8a5c2);
     justify-content: center;
 }
-
 .gridhijo1 h1 {
     align-self: center;
 }
-
 /*contenedor que agrupa elementos en columna, pero tendrá más contenedores*/
 .gridhijo2 {
     display: flex;
     flex-wrap: wrap;
 }
-
 /*Este es el contenedor que contiene a las imagenes de top, shorts y pantalones*/
 .contenedorropa {
     display: flex;
@@ -214,49 +217,45 @@ main {
 }
 /*Clase contenedor que da el borde inferior azul*/
 .contenedormainbordeinferior1 {
-    padding-bottom: 5rem;
+    padding: 3rem 0;
     border-bottom: 50px solid rgb(27, 137, 240);
 }
 .contenedormainbordeinferior2 {
     padding-bottom: 5rem;
     border-bottom: 50px solid #E87E64;
-    
 }
-
-
 /*Desde aqui se modifica el tamaño de las letras H1 h2 p*/
 div h1 {
     font-size: 5vw !important;
     text-align: center;
 }
-
 .contenedormain span {
     color: rgb(7, 90, 214);
 }
-
 div p {
-    font-size: 2.4vw !important;
+    font-size: 2.4vw ;
     text-align: center;
 }
-
 footer div a {
-    font-size: 1.8vw !important;
+    font-size: 1.8vw;
     /*Le coloqué important porque bootstrap tiene prioridad*/
     font-weight: bold;
     /*negrita*/
     color: white !important;
 }
-
 div h2 {
     font-size: 2.8vw;
     text-align: center;
 }
-
 /*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
 @media (min-width: 992px) {
     main {
         min-height: 650px;
     }
+    header p{
+        font-size: 2vw;
+    }
+    
 
     .logo-small {
         max-width: 20%;
@@ -268,8 +267,37 @@ div h2 {
         display: flex;
         flex-wrap: nowrap;
     }
+    footer p{
+        font-size: 2vw;
+    }
 
     footer div a {
         font-size: 1.5vw;
     }
+}
+
+/*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
+@media (min-width: 320px) and (max-width: 768px) {
+    header p{
+        font-size: small;
+    }
+    .logo-small {
+        max-width: 60%;
+        height: auto;
+        
+    }
+    main h2{
+        font-size: 5vw;
+
+    }
+    main p{
+        font-size: 4vw;
+    }
+    footer div a {
+        font-size: 3vw;
+    }
+    footer p{
+        font-size: small;
+    }
+   
 }
