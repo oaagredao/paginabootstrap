@@ -255,14 +255,11 @@ div h2 {
     header p{
         font-size: 2vw;
     }
-    
-
     .logo-small {
         max-width: 20%;
         height: auto;
         min-width: 15%;
     }
-
     .contenedormain2 {
         display: flex;
         flex-wrap: nowrap;
@@ -270,12 +267,10 @@ div h2 {
     footer p{
         font-size: 2vw;
     }
-
     footer div a {
         font-size: 1.5vw;
     }
 }
-
 /*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
 @media (min-width: 320px) and (max-width: 768px) {
     header p{
@@ -285,6 +280,9 @@ div h2 {
         max-width: 60%;
         height: auto;
         
+    }
+    main{
+        margin-bottom: 2vw;
     }
     main h2{
         font-size: 5vw;
@@ -299,5 +297,53 @@ div h2 {
     footer p{
         font-size: small;
     }
+    /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
+    .contenedormaingrid {
+        display: flex;
+        flex-wrap: wrap;
+        /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
+        width: 100%;
+        height: 30rem;
+    }
+    .gridhijo1 {
+        display: flex;
+        flex-wrap: nowrap;
+        background: linear-gradient(to bottom, #ffffff, #f8a5c2);
+        width: 100%;
+        align-items: center;
+       
+    }
+    .gridhijo1 h1 {
+        width: 100%;
+    }
+    .gridhijo1 p {
+        width: 100%;
+        height: 25%;
+    }
+    .contenedormain2 {
+        display: flex;
+        width: 80%;
+        margin: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .contenedortops {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-right: 25px;
+    }
+    .contenedortops img {
+        max-width: 350px;
+        max-height: 150px;
+        width: 25vw;
+        height: auto;
+        object-fit: cover;
+    }
+    footer div a {
+        font-size: 3.5vw;
+    }
    
+
 }
