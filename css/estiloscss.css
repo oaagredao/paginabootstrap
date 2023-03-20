@@ -7,29 +7,23 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     /*Esto se asegura de que si hay objetos grandes, no se desborden en el eje x*/
     max-width: 1500px;
 }
-
 /*Aqui defino colores de fondo para cada pagina*/
 .bodybackgroundcolor1 {
     background-image: linear-gradient(135deg, #E8F6F8 0%, #E8F6F8 25%, #8ED0D3 50%, #E8F6F8 75%, #E8F6F8 100%);
 }
-
-
 /*Color de fondo del h2*/
 .colorh2 {
     background-color: #fab9d0;
 }
-
 a {
     text-decoration: none;
 }
-
 /*Aqui voy a cambiar el estilo de los links a del nav*/
 .estiloa li a {
     font-size: 1.2em !important;
@@ -37,21 +31,18 @@ a {
     font-weight: bold;
     /*negrita*/
 }
-
 .estiloa form button {
     font-size: 1.2em !important;
     /*Le coloqué important porque bootstrap tiene prioridad*/
     font-weight: bold;
     /*negrita*/
 }
-
 /*Aqui voy a colocar el css del logo de la navbar*/
 .logo-small {
     max-width: 40%;
     height: auto;
     min-width: 35%;
 }
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -59,7 +50,6 @@ main {
     max-width: 1500px;
     padding: 0, 5rem;
 }
-
 /*Contenedor que agrupa contenedores en columna, usado como contenedor principal de main*/
 .contenedormain {
     display: flex;
@@ -67,7 +57,6 @@ main {
     width: 100%;
     margin-top: 5vw;
 }
-
 .contenedormainsinmargin {
     display: flex;
     flex-direction: column;
@@ -79,7 +68,6 @@ main {
     justify-content: center;
     margin: 5vw;
 }
-
 .contenedormain img {
     width: 100%;
     height: auto;
@@ -87,14 +75,11 @@ main {
     object-fit: contain;
     position: top;
 }
-
 .contenedormain a img {
     width: 70%;
     height: auto;
     max-height: 1700px;
 }
-
-
 /*Contenedores de porque meditar index, contenedor principal de main que agrupa en la misma fila*/
 .contenedormain2 {
     display: flex;
@@ -104,7 +89,6 @@ main {
     justify-content: center;
     flex-wrap: nowrap;
 }
-
 /*Contenedor hijo que agrupa elementos en columna*/
 .contenedorhijo1 {
     display: flex;
@@ -112,11 +96,9 @@ main {
     margin: 50px;
     justify-content: center;
 }
-
 .contenedorhijo1 span {
     color: rgb(74, 138, 233);
 }
-
 main div img {
     width: 100%;
     height: auto;
@@ -130,8 +112,6 @@ main div a img {
     max-height: 400px;
     object-fit: contain;
 }
-
-
 /*Colocaré los contenedores  para la pagina ropa*/
 /*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
 .contenedormaingrid {
@@ -142,7 +122,6 @@ main div a img {
     max-height: 100%;
     height: 50rem;
 }
-
 /*Contenedor que tiene el titulo de ropa, agrupa en columna*/
 .gridhijo1 {
     display: flex;
@@ -150,21 +129,17 @@ main div a img {
     background: linear-gradient(to top, #ffffff, #f8a5c2);
     justify-content: center;
 }
-
 .gridhijo1:hover {
     background: linear-gradient(to top, #ffffff, #8fc8f7);
 }
-
 .gridhijo1 h1 {
     align-self: center;
 }
-
 /*contenedor que agrupa elementos en columna, pero tendrá más contenedores*/
 .gridhijo2 {
     display: flex;
     flex-wrap: wrap;
 }
-
 /*Este es el contenedor que contiene a las imagenes de top, shorts y pantalones*/
 .contenedorropa {
     display: flex;
@@ -174,7 +149,6 @@ main div a img {
     margin: 1rem;
     justify-content: space-between;
 }
-
 .contenedorropa h2 {
     color: rgb(12, 12, 12);
     margin-left: 3vw;
@@ -186,7 +160,6 @@ main div a img {
     width: 25vw;
     height: auto;
 }
-
 /*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
 .contenedorropa1 {
     background: linear-gradient(to left, #ffffff, #a4d1f5);
@@ -195,14 +168,12 @@ main div a img {
 .contenedorropa1:hover {
     background: linear-gradient(to left, #ffffff, #f8a5c2);
 }
-
 /*Aqui haré los contenedores para agrupar las imagenes de ropa en dos columnas*/
 .contenedortops {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
 }
-
 /*Coloco estilos al boton de comopra en ropa*/
 .contenedortops button {
     width: 10vw;
@@ -212,17 +183,14 @@ main div a img {
     border-color: #ffffff;
     border-radius: 10px;
 }
-
 .contenedortops button:hover {
     background-color: #8ac5f5;
 }
-
 .contenedortops button a {
     color: rgb(0, 0, 0);
     margin: 0;
     font-size: 2.5vw;
 }
-
 /*Le coloco color de fonto al titulo de tops en la seccion tops*/
 .colorfondotitulotop {
     background-color: #f8a5c2;
@@ -241,7 +209,6 @@ main div a img {
     height: auto;
     object-fit: cover;
 }
-
 /*Contenedor con un color de fondo asignado a los tops de ropa*/
 .contenedortopsbackgroundcolor {
     background-color: #f7f7f7;
@@ -250,7 +217,6 @@ main div a img {
     /* gradiente radial */
     padding: 3vw;
 }
-
 /*Contenedor con un color de fondo asignado a los pantalones de ropa*/
 .contenedorpantalonbackgroundcolor {
     background-color: #f8a5c2;
@@ -285,7 +251,6 @@ main div a img {
 .boton:hover {
     background-color: #8ac5f5;
 }
-
 .boton a {
     color: rgb(0, 0, 0);
     margin: 0;
@@ -296,19 +261,16 @@ main div a img {
 }
 /*Desde aqui se modifica el tamaño de las letras H1 h2 p*/
 div h1 {
-    font-size: 5vw !important;
+    font-size: 5vw;
     text-align: center;
 }
-
 .contenedormain span {
     color: rgb(7, 90, 214);
 }
-
 div p {
     font-size: 2.4vw;
     text-align: center;
 }
-
 footer div a {
     font-size: 1.8vw;
     /*Le coloqué important porque bootstrap tiene prioridad*/
@@ -316,12 +278,10 @@ footer div a {
     /*negrita*/
     color: white !important;
 }
-
 div h2 {
     font-size: 2.8vw;
     text-align: center;
 }
-
 /*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
 @media (min-width: 992px) {
     main {
@@ -337,50 +297,51 @@ div h2 {
         height: auto;
         min-width: 15%;
     }
-
     .contenedormain2 {
         display: flex;
         flex-wrap: nowrap;
     }
-
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
     footer p {
         font-size: 2vw;
     }
-
     footer div a {
         font-size: 1.5vw;
     }
 }
-
 /*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
 @media (min-width: 320px) and (max-width: 768px) {
     header p {
         font-size: small;
     }
-
     .logo-small {
         max-width: 60%;
         height: auto;
-
     }
-
     main {
         margin-bottom: 2vw;
     }
-
+    main h1 {
+        font-size: 10vw;
+    }
     main h2 {
-        font-size: 5vw;
-
+        font-size: 7vw;
     }
-
     main p {
-        font-size: 4vw;
+        font-size: 5vw;
     }
-
     footer p {
         font-size: small;
     }
-
     /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
     .contenedormaingrid {
         display: flex;
@@ -389,7 +350,6 @@ div h2 {
         width: 100%;
         height: 30rem;
     }
-
     .gridhijo1 {
         display: flex;
         flex-wrap: nowrap;
@@ -398,38 +358,51 @@ div h2 {
         align-items: center;
 
     }
-
     .gridhijo1 h1 {
         width: 100%;
     }
-
     .gridhijo1 p {
         width: 100%;
         height: 25%;
     }
-
     .contenedormain2 {
         display: flex;
-        width: 80%;
+        width: 100%;
         margin: 0 1.5rem;
         margin-bottom: 50px;
         margin-top: 30px;
         align-items: center;
         justify-content: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
-
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
     .contenedortops {
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
-        margin-right: 25px;
+        width: 100%;
     }
-
+    .contenedortops button {
+        width: 15vw;
+        height: 10vw;
+        margin-left: 1vw;
+        border-radius: 10px;
+    }
+    .contenedortops button a {
+        font-size: 4vw;
+    }
     .contenedortops img {
         max-width: 350px;
         max-height: 150px;
-        width: 25vw;
+        width: 50vw;
         height: auto;
         object-fit: cover;
     }
@@ -449,11 +422,9 @@ div h2 {
         margin: 0;
         font-size: 4vw;
     }
-
     footer div {
         flex-wrap: wrap;
     }
-
     footer div a {
         font-size: 5vw;
     }
