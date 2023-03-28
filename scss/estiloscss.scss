@@ -1,0 +1,481 @@
+/*Importar las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Mandali&family=Ubuntu:ital,wght@1,300&display=swap');
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    /*Esto se asegura de que si hay objetos grandes, no se desborden en el eje x*/
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/*Aqui voy a cambiar el estilo de los links a del nav*/
+.estiloa {
+    li a {
+        font-size: 1.2em !important;
+        /*Le coloqué important porque bootstrap tiene prioridad*/
+        font-weight: bold;
+        /*negrita*/
+    }
+    form button {
+        font-size: 1.2em !important;
+        /*Le coloqué important porque bootstrap tiene prioridad*/
+        font-weight: bold;
+        /*negrita*/
+    }
+}
+
+/*Aqui voy a colocar el css del logo de la navbar*/
+.logo-small {
+    max-width: 40%;
+    height: auto;
+    min-width: 35%;
+}
+
+/*Desde aqui se modifica el tamaño de las letras H1 h2 p*/
+div {
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+    }
+    p {
+        font-size: 2.4vw;
+        text-align: center;
+    }
+    h2 {
+        font-size: 2.8vw;
+        text-align: center;
+    }
+}
+
+/*Aqui defino colores de fondo para cada pagina*/
+.bodybackgroundcolor1 {
+    background-image: linear-gradient(135deg, #E8F6F8 0%, #E8F6F8 25%, #8ED0D3 50%, #E8F6F8 75%, #E8F6F8 100%);
+}
+/*Color de fondo del h2*/
+.colorh2 {
+    background-color: #fab9d0;
+}
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    padding: 0, 5rem;
+    img{
+        border: none; /* Quitamos cualquier borde predeterminado de la imagen */
+    }
+    div img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+}
+footer div a {
+    /*Le coloqué important porque bootstrap tiene prioridad*/
+    font-weight: bold;
+    /*negrita*/
+    color: white !important;
+}
+
+/*Contenedor que agrupa contenedores en columna, usado como contenedor principal de main*/
+.contenedormain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5vw;
+    a {
+        display: flex;
+        justify-content: center;
+        margin: 5vw;
+        img {
+            width: 70%;
+            height: auto;
+            max-height: 1700px;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 1300px;
+        object-fit: contain;
+        position: top;
+    }
+    div a img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+    span {
+        color: rgb(7, 90, 214);
+    }
+}
+.contenedormainsinmargin {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*Contenedores de porque meditar index, contenedor principal de main que agrupa en la misma fila*/
+.contenedormain2 {
+    display: flex;
+    width: 100%;
+    margin: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+/*Contenedor hijo que agrupa elementos en columna*/
+.contenedorhijo1 {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    justify-content: center;
+    span {
+        color: rgb(74, 138, 233);
+    }
+}
+/*Colocaré los contenedores  para la pagina ropa*/
+/*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
+.contenedormaingrid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
+    width: 100%;
+    max-height: 100%;
+}
+/*Contenedor que tiene el titulo de ropa, agrupa en columna*/
+.gridhijo1 {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to top, #ffffff, #f8a5c2);
+    justify-content: center;
+    h1 {
+        align-self: center;
+    }
+    &:hover {
+        background: linear-gradient(to top, #ffffff, #8fc8f7);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*contenedor que agrupa elementos en columna, pero tendrá más contenedores*/
+.gridhijo2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Este es el contenedor que contiene a las imagenes de top, shorts y pantalones*/
+.contenedorropa {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+    justify-content: space-between;
+    h2 {
+        color: rgb(12, 12, 12);
+        margin-left: 3vw;
+    }
+    img {
+        max-width: 350px;
+        max-height: 300px;
+        width: 70vw;
+        height: auto;
+    }
+}
+
+/*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
+.contenedorropa1 {
+    background: linear-gradient(to left, #ffffff, #a4d1f5);
+}
+.contenedorropa1:hover {
+    background: linear-gradient(to left, #ffffff, #f8a5c2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+/*Aqui haré los contenedores para agrupar las imagenes de ropa en dos columnas*/
+.contenedortops {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    button {
+        width: 10vw;
+        height: 5vw;
+        margin-left: 1vw;
+        background-color: #f590ec;
+        border-color: #ffffff;
+        border-radius: 10px;
+        a {
+            color: rgb(0, 0, 0);
+            margin: 0;
+            font-size: 2.5vw;
+        }
+        &:hover {
+            background-color: #8ac5f5;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+    }
+    img {
+        max-width: 350px;
+        max-height: 300px;
+        width: 25vw;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/*Le coloco color de fonto al titulo de tops en la seccion tops*/
+.colorfondotitulotop {
+    background-color: #f8a5c2;
+}
+/*Le coloco color de fonto al titulo de joggers en la seccion joggers*/
+.colorfondotitulojogger {
+    background-color: #8ED0D3;
+}
+
+/*Le daré aqui estilo a las imagenes de los tops de ropa*/
+
+/*Contenedor con un color de fondo asignado a los tops de ropa*/
+.contenedortopsbackgroundcolor {
+    background-color: #f7f7f7;
+    /* blanco */
+    background-image: radial-gradient(circle at 20% 50%, #b8e0e9, #b8e0e9 60%, rgba(248, 165, 194, 0.5) 70%, rgba(248, 165, 194, 0.1));
+    /* gradiente radial */
+    padding: 3vw;
+}
+/*Contenedor con un color de fondo asignado a los pantalones de ropa*/
+.contenedorpantalonbackgroundcolor {
+    background-color: #f8a5c2;
+    /* rosa claro */
+    background-image: radial-gradient(circle at 20% 50%, rgba(184, 224, 233, 0.1), rgba(184, 224, 233, 0.5) 60%, #b8e0e9 70%, #b8e0e9);
+    /* gradiente radial */
+    padding: 3vw;
+}
+
+/*Clase contenedor que da el borde inferior azul*/
+.contenedormainbordeinferior1 {
+    border-bottom: 50px solid rgb(27, 137, 240);
+}
+
+.contenedormainbordeinferior2 {
+    padding-bottom: 5rem;
+    border-bottom: 50px solid #E87E64;
+}
+/*Voy a crear la tarjeta para articulos*/
+
+/*Boton de articulos*/
+.boton {
+    width: 10vw;
+    height: 5vw;
+    margin-left: 1vw;
+    background-color: #f590ec;
+    border-color: #ffffff;
+    border-radius: 10px;
+    a {
+        color: rgb(0, 0, 0);
+        margin: 0;
+        font-size: 2.5vw;
+    }
+    &:hover {
+        background-color: #8ac5f5;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+.boton2 {
+    width: 10vw;
+    height: 5vw;
+    margin-left: 1vw;
+    background-color: #8ac5f5;
+    border-color: #ffffff;
+    border-radius: 10px;
+    a {
+        color: rgb(0, 0, 0);
+        margin: 0;
+        font-size: 2.5vw;
+    }
+    &:hover {
+        background-color: #f590ec;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+.listaarticulos{
+    font-size: 2vw;
+}
+.tarjetaarticulos{
+    display: flex;
+}
+/*media queries*/
+/*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
+@media (min-width: 992px) {
+    main {
+        min-height: 650px;
+    }
+
+    header p {
+        font-size: 2vw;
+    }
+
+    .logo-small {
+        max-width: 20%;
+        height: auto;
+        min-width: 15%;
+    }
+    .contenedormain2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
+    footer {
+        p {
+            font-size: 2vw;
+        }
+        div a {
+            font-size: 2vw;
+            /*Le coloqué important porque bootstrap tiene prioridad*/
+            font-weight: bold;
+            /*negrita*/
+            color: white;
+        }
+    }
+    
+}
+/*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
+@media (min-width: 320px) and (max-width: 768px) {
+    header p {
+        font-size: small;
+    }
+    .logo-small {
+        max-width: 60%;
+        height: auto;
+    }
+    main {
+        margin-bottom: 2vw;
+        h1 {
+            font-size: 7vw;
+        }
+        h2 {
+            font-size: 5vw;
+        }
+        p {
+            font-size: 3.5vw;
+        }
+    }
+ 
+    footer p {
+        font-size: small;
+    }
+    /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
+    .contenedormaingrid {
+        display: flex;
+        flex-wrap: wrap;
+        /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
+        width: 100%;
+    }
+    .gridhijo1 {
+        display: flex;
+        flex-wrap: nowrap;
+        background: linear-gradient(to bottom, #ffffff, #f8a5c2);
+        width: 100%;
+        align-items: center;
+        h1 {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+        }
+
+    }
+    .contenedormain2 {
+        display: flex;
+        width: 100%;
+        margin: 0 1.5rem;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
+    .contenedortops {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        button {
+            width: 15vw;
+            height: 10vw;
+            margin-left: 1vw;
+            border-radius: 10px;
+            a {
+                font-size: 4vw;
+            }
+        }
+        img {
+            max-width: 350px;
+            max-height: 150px;
+            width: 50vw;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .listaarticulos{
+        font-size: 4vw;
+    }
+    .boton {
+        width: 20vw;
+        height: 10vw;
+        margin-left: 1vw;
+        background-color: #f590ec;
+        border-color: #ffffff;
+        border-radius: 10px;
+        a {
+            color: rgb(0, 0, 0);
+            margin: 0;
+            font-size: 4vw;
+        }
+    }
+   
+    footer{
+        div {
+            flex-wrap: wrap;
+            a {
+                font-size: 5vw;
+            }
+        }
+
+    } 
+    
+}
