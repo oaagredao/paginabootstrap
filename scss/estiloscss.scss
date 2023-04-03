@@ -8,6 +8,17 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
+/*Variables*/
+$bgcolor1:#fc9dbe ;
+$bgcolor2:#b7dcfa ;
+
+/*
+$bgcolor1:#fac0d4 ;
+$bgcolor2:#b7dcfa ;
+*/
+
+
 body {
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
@@ -61,7 +72,7 @@ div {
 }
 /*Color de fondo del h2*/
 .colorh2 {
-    background-color: #fab9d0;
+    background-color: $bgcolor1;
 }
 a {
     text-decoration: none;
@@ -162,7 +173,7 @@ footer div a {
 .gridhijo1 {
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(to top, #ffffff, #f8a5c2);
+    background: linear-gradient(to top, #ffffff, $bgcolor1);
     justify-content: center;
     h1 {
         align-self: center;
@@ -201,12 +212,13 @@ footer div a {
 
 /*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
 .contenedorropa1 {
-    background: linear-gradient(to left, #ffffff, #a4d1f5);
+    background: linear-gradient(to left, #ffffff, $bgcolor2);
+    &:hover {
+        background: linear-gradient(to left, #ffffff, $bgcolor1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
 }
-.contenedorropa1:hover {
-    background: linear-gradient(to left, #ffffff, #f8a5c2);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
+
 /*Aqui haré los contenedores para agrupar las imagenes de ropa en dos columnas*/
 .contenedortops {
     display: flex;
@@ -216,7 +228,7 @@ footer div a {
         width: 10vw;
         height: 5vw;
         margin-left: 1vw;
-        background-color: #f590ec;
+        background-color: $bgcolor1;
         border-color: #ffffff;
         border-radius: 10px;
         a {
@@ -225,7 +237,7 @@ footer div a {
             font-size: 2.5vw;
         }
         &:hover {
-            background-color: #8ac5f5;
+            background-color: $bgcolor2;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         }
     }
@@ -240,11 +252,11 @@ footer div a {
 
 /*Le coloco color de fonto al titulo de tops en la seccion tops*/
 .colorfondotitulotop {
-    background-color: #f8a5c2;
+    background-color: $bgcolor1;
 }
 /*Le coloco color de fonto al titulo de joggers en la seccion joggers*/
 .colorfondotitulojogger {
-    background-color: #8ED0D3;
+    background-color: $bgcolor2;
 }
 
 /*Le daré aqui estilo a las imagenes de los tops de ropa*/
@@ -259,7 +271,7 @@ footer div a {
 }
 /*Contenedor con un color de fondo asignado a los pantalones de ropa*/
 .contenedorpantalonbackgroundcolor {
-    background-color: #f8a5c2;
+    background-color: $bgcolor1;
     /* rosa claro */
     background-image: radial-gradient(circle at 20% 50%, rgba(184, 224, 233, 0.1), rgba(184, 224, 233, 0.5) 60%, #b8e0e9 70%, #b8e0e9);
     /* gradiente radial */
@@ -268,12 +280,12 @@ footer div a {
 
 /*Clase contenedor que da el borde inferior azul*/
 .contenedormainbordeinferior1 {
-    border-bottom: 50px solid rgb(27, 137, 240);
+    border-bottom: 50px solid $bgcolor2;
 }
 
 .contenedormainbordeinferior2 {
     padding-bottom: 5rem;
-    border-bottom: 50px solid #E87E64;
+    border-bottom: 50px solid $bgcolor1;
 }
 /*Voy a crear la tarjeta para articulos*/
 
@@ -282,7 +294,7 @@ footer div a {
     width: 10vw;
     height: 5vw;
     margin-left: 1vw;
-    background-color: #f590ec;
+    background-color: $bgcolor1;
     border-color: #ffffff;
     border-radius: 10px;
     a {
@@ -291,7 +303,7 @@ footer div a {
         font-size: 2.5vw;
     }
     &:hover {
-        background-color: #8ac5f5;
+        background-color: $bgcolor2;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
@@ -299,7 +311,7 @@ footer div a {
     width: 10vw;
     height: 5vw;
     margin-left: 1vw;
-    background-color: #8ac5f5;
+    background-color: $bgcolor2;
     border-color: #ffffff;
     border-radius: 10px;
     a {
@@ -308,7 +320,7 @@ footer div a {
         font-size: 2.5vw;
     }
     &:hover {
-        background-color: #f590ec;
+        background-color:$bgcolor1;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
@@ -319,11 +331,41 @@ footer div a {
 .tarjetaarticulos{
     display: flex;
 }
+
+/*Aqui empieza los estilos de nosotros*/
+.bloqueimghorizontal{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    h2{
+        position: absolute;
+        bottom: 50%;
+        left: 53%;
+        z-index: 1;
+        color: rgb(53, 133, 236);
+        padding: 10px;
+        border: 2px solid rgb(53, 133, 236);; /* Agrega un borde blanco alrededor del elemento h2 */
+        
+    }
+    .imagenhorizontal {
+        position: relative;
+        z-index: -1;
+        object-fit: contain;
+        
+      }
+}
+
+
+
 /*media queries*/
 /*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
 @media (min-width: 992px) {
     main {
         min-height: 650px;
+        div .imgexpandir{
+            object-fit:cover;
+        }
     }
 
     header p {
