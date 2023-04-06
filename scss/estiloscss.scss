@@ -10,8 +10,8 @@
 }
 
 /*Variables*/
-$bgcolor1:#fc9dbe ;
-$bgcolor2:#b7dcfa ;
+$bgcolor1: #fc9dbe;
+$bgcolor2: #b7dcfa;
 
 /*
 $bgcolor1:#fac0d4 ;
@@ -35,6 +35,7 @@ body {
         font-weight: bold;
         /*negrita*/
     }
+
     form button {
         font-size: 1.2em !important;
         /*Le coloqué important porque bootstrap tiene prioridad*/
@@ -56,10 +57,12 @@ div {
         font-size: 5vw;
         text-align: center;
     }
+
     p {
         font-size: 2.4vw;
         text-align: center;
     }
+
     h2 {
         font-size: 2.8vw;
         text-align: center;
@@ -70,10 +73,12 @@ div {
 .bodybackgroundcolor1 {
     background-image: linear-gradient(135deg, #E8F6F8 0%, #E8F6F8 25%, #8ED0D3 50%, #E8F6F8 75%, #E8F6F8 100%);
 }
+
 /*Color de fondo del h2*/
 .colorh2 {
     background-color: $bgcolor1;
 }
+
 a {
     text-decoration: none;
 }
@@ -84,9 +89,12 @@ main {
     justify-content: center;
     max-width: 1500px;
     padding: 0, 5rem;
-    img{
-        border: none; /* Quitamos cualquier borde predeterminado de la imagen */
+
+    img {
+        border: none;
+        /* Quitamos cualquier borde predeterminado de la imagen */
     }
+
     div img {
         width: 100%;
         height: auto;
@@ -94,6 +102,7 @@ main {
         object-fit: contain;
     }
 }
+
 footer div a {
     /*Le coloqué important porque bootstrap tiene prioridad*/
     font-weight: bold;
@@ -107,16 +116,19 @@ footer div a {
     flex-direction: column;
     width: 100%;
     margin-top: 5vw;
+
     a {
         display: flex;
         justify-content: center;
         margin: 5vw;
+
         img {
             width: 70%;
             height: auto;
             max-height: 1700px;
         }
     }
+
     img {
         width: 100%;
         height: auto;
@@ -124,16 +136,19 @@ footer div a {
         object-fit: contain;
         position: top;
     }
+
     div a img {
         width: 100%;
         height: auto;
         max-height: 400px;
         object-fit: contain;
     }
+
     span {
         color: rgb(7, 90, 214);
     }
 }
+
 .contenedormainsinmargin {
     display: flex;
     flex-direction: column;
@@ -150,16 +165,19 @@ footer div a {
     justify-content: center;
     flex-wrap: nowrap;
 }
+
 /*Contenedor hijo que agrupa elementos en columna*/
 .contenedorhijo1 {
     display: flex;
     flex-direction: column;
     margin: 50px;
     justify-content: center;
+
     span {
         color: rgb(74, 138, 233);
     }
 }
+
 /*Colocaré los contenedores  para la pagina ropa*/
 /*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
 .contenedormaingrid {
@@ -169,15 +187,18 @@ footer div a {
     width: 100%;
     max-height: 100%;
 }
+
 /*Contenedor que tiene el titulo de ropa, agrupa en columna*/
 .gridhijo1 {
     display: flex;
     flex-wrap: wrap;
     background: linear-gradient(to top, #ffffff, $bgcolor1);
     justify-content: center;
+
     h1 {
         align-self: center;
     }
+
     &:hover {
         background: linear-gradient(to top, #ffffff, #8fc8f7);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -190,6 +211,7 @@ footer div a {
     display: flex;
     flex-wrap: wrap;
 }
+
 /*Este es el contenedor que contiene a las imagenes de top, shorts y pantalones*/
 .contenedorropa {
     display: flex;
@@ -198,10 +220,12 @@ footer div a {
     width: 100%;
     margin: 1rem;
     justify-content: space-between;
+
     h2 {
         color: rgb(12, 12, 12);
         margin-left: 3vw;
     }
+
     img {
         max-width: 350px;
         max-height: 300px;
@@ -213,6 +237,7 @@ footer div a {
 /*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
 .contenedorropa1 {
     background: linear-gradient(to left, #ffffff, $bgcolor2);
+
     &:hover {
         background: linear-gradient(to left, #ffffff, $bgcolor1);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -224,6 +249,7 @@ footer div a {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+
     button {
         width: 10vw;
         height: 5vw;
@@ -231,16 +257,19 @@ footer div a {
         background-color: $bgcolor1;
         border-color: #ffffff;
         border-radius: 10px;
+
         a {
             color: rgb(0, 0, 0);
             margin: 0;
             font-size: 2.5vw;
         }
+
         &:hover {
             background-color: $bgcolor2;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         }
     }
+
     img {
         max-width: 350px;
         max-height: 300px;
@@ -254,6 +283,7 @@ footer div a {
 .colorfondotitulotop {
     background-color: $bgcolor1;
 }
+
 /*Le coloco color de fonto al titulo de joggers en la seccion joggers*/
 .colorfondotitulojogger {
     background-color: $bgcolor2;
@@ -269,6 +299,7 @@ footer div a {
     /* gradiente radial */
     padding: 3vw;
 }
+
 /*Contenedor con un color de fondo asignado a los pantalones de ropa*/
 .contenedorpantalonbackgroundcolor {
     background-color: $bgcolor1;
@@ -287,6 +318,7 @@ footer div a {
     padding-bottom: 5rem;
     border-bottom: 50px solid $bgcolor1;
 }
+
 /*Voy a crear la tarjeta para articulos*/
 
 /*Boton de articulos*/
@@ -297,16 +329,19 @@ footer div a {
     background-color: $bgcolor1;
     border-color: #ffffff;
     border-radius: 10px;
+
     a {
         color: rgb(0, 0, 0);
         margin: 0;
         font-size: 2.5vw;
     }
+
     &:hover {
         background-color: $bgcolor2;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
+
 .boton2 {
     width: 10vw;
     height: 5vw;
@@ -314,48 +349,108 @@ footer div a {
     background-color: $bgcolor2;
     border-color: #ffffff;
     border-radius: 10px;
+
     a {
         color: rgb(0, 0, 0);
         margin: 0;
         font-size: 2.5vw;
     }
+
     &:hover {
-        background-color:$bgcolor1;
+        background-color: $bgcolor1;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
 
-.listaarticulos{
+.listaarticulos {
     font-size: 2vw;
 }
-.tarjetaarticulos{
+
+.tarjetaarticulos {
     display: flex;
 }
 
 /*Aqui empieza los estilos de nosotros*/
-.bloqueimghorizontal{
+/*Estilos tambien del slider de clases*/
+.bloqueimghorizontal {
     display: inline-block;
     position: relative;
     width: 100%;
+    
 
-    h2{
+    .h2horizontal {
         position: absolute;
         bottom: 50%;
         left: 53%;
         z-index: 1;
-        color: rgb(53, 133, 236);
+        color: rgba(0, 0, 0, 0.699);
+        background-color: $bgcolor1;
         padding: 10px;
-        border: 2px solid rgb(53, 133, 236);; /* Agrega un borde blanco alrededor del elemento h2 */
+        border: 2px solid $bgcolor1;
+        /* Agrega un borde blanco alrededor del elemento h2 */
+
+    }
+
+    .h2horizontal2 {
+        position: absolute;
+        bottom: 15%;
+        top: 5%;
+        left: 50%;
+        z-index: 1;
+        color: rgba(0, 0, 0, 0.699);
+        padding: 10px;
+        /* Agrega un borde blanco alrededor del elemento h2 */
         
     }
+
     .imagenhorizontal {
         position: relative;
         z-index: -1;
         object-fit: contain;
-        
-      }
+
+    }
 }
 
+/*Estilos de clases*/
+
+/*Aqui defino el estilo para sobresalir letras en el slider*/
+.sobresalir {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+
+}
+
+
+.carousel-inner {
+    img {
+        height: 450px;
+        object-fit: cover;
+    }
+
+}
+
+/*Estilos para los bloques que componen la pagina clases*/
+.bloqueimghorizontal2 {
+    width: 100%;
+    height: 20vw;
+    background-image: url('../multimedia/imagenes/clases/profesor.jpg');
+    background-size: cover;
+}
+.bloqueimghorizontal3{
+    width: 100%;
+    height: 20vw;
+    background-image: url('../multimedia/imagenes/clases/fondocolor2.jpg');
+    background-size: cover;
+}
+.bloqueimghorizontal4{
+    width: 100%;
+    height: auto;
+    background-image: url('../multimedia/imagenes/clases/fondocolor3.jpg');
+    background-size: cover;
+    .bloquehorizontalimg{
+        height: 100%;
+        width: auto;
+    }
+}
 
 
 /*media queries*/
@@ -363,8 +458,9 @@ footer div a {
 @media (min-width: 992px) {
     main {
         min-height: 650px;
-        div .imgexpandir{
-            object-fit:cover;
+
+        div .imgexpandir {
+            object-fit: cover;
         }
     }
 
@@ -377,10 +473,12 @@ footer div a {
         height: auto;
         min-width: 15%;
     }
+
     .contenedormain2 {
         display: flex;
         flex-wrap: nowrap;
     }
+
     .contenedormain3 {
         display: flex;
         width: 100%;
@@ -391,10 +489,12 @@ footer div a {
         flex-wrap: nowrap;
         padding: 1vw;
     }
+
     footer {
         p {
             font-size: 2vw;
         }
+
         div a {
             font-size: 2vw;
             /*Le coloqué important porque bootstrap tiene prioridad*/
@@ -403,33 +503,40 @@ footer div a {
             color: white;
         }
     }
-    
+
 }
+
 /*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
 @media (min-width: 320px) and (max-width: 768px) {
     header p {
         font-size: small;
     }
+
     .logo-small {
         max-width: 60%;
         height: auto;
     }
+
     main {
         margin-bottom: 2vw;
+
         h1 {
             font-size: 7vw;
         }
+
         h2 {
             font-size: 5vw;
         }
+
         p {
             font-size: 3.5vw;
         }
     }
- 
+
     footer p {
         font-size: small;
     }
+
     /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
     .contenedormaingrid {
         display: flex;
@@ -437,20 +544,24 @@ footer div a {
         /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
         width: 100%;
     }
+
     .gridhijo1 {
         display: flex;
         flex-wrap: nowrap;
         background: linear-gradient(to bottom, #ffffff, #f8a5c2);
         width: 100%;
         align-items: center;
+
         h1 {
             width: 100%;
         }
+
         p {
             width: 100%;
         }
 
     }
+
     .contenedormain2 {
         display: flex;
         width: 100%;
@@ -461,6 +572,7 @@ footer div a {
         justify-content: center;
         flex-wrap: wrap;
     }
+
     .contenedormain3 {
         display: flex;
         width: 100%;
@@ -471,19 +583,23 @@ footer div a {
         flex-wrap: nowrap;
         padding: 1vw;
     }
+
     .contenedortops {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+
         button {
             width: 15vw;
             height: 10vw;
             margin-left: 1vw;
             border-radius: 10px;
+
             a {
                 font-size: 4vw;
             }
         }
+
         img {
             max-width: 350px;
             max-height: 150px;
@@ -493,9 +609,10 @@ footer div a {
         }
     }
 
-    .listaarticulos{
+    .listaarticulos {
         font-size: 4vw;
     }
+
     .boton {
         width: 20vw;
         height: 10vw;
@@ -503,21 +620,42 @@ footer div a {
         background-color: #f590ec;
         border-color: #ffffff;
         border-radius: 10px;
+
         a {
             color: rgb(0, 0, 0);
             margin: 0;
             font-size: 4vw;
         }
     }
-   
-    footer{
+
+
+    /*carrusel img*/
+    .bloqueimghorizontal {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        .imagenhorizontal{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .carousel-inner {
+        img {
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+
+    footer {
         div {
             flex-wrap: wrap;
+
             a {
                 font-size: 5vw;
             }
         }
 
-    } 
-    
+    }
+
 }
