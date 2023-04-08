@@ -379,6 +379,47 @@ footer div a {
 }
 
 /*Estilos para los bloques que componen la pagina clases*/
+/*Extend de los bloques horizontales clases*/
+.bloqueimghorizontal6, .bloqueimghorizontal5, .bloqueimghorizontal4 {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+/*Extend para texto dentro del imghorizontal clases*/
+.bloqueimghorizontal6 .h2horizontal, .bloqueimghorizontal5 .h2horizontal, .bloqueimghorizontal4 .h2horizontal {
+  position: absolute;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.699);
+  background-color: #fc9dbe;
+  padding: 10px;
+  border: 2px solid #fc9dbe;
+}
+
+/*Extende para los p2 dentro del imghorizontal clases*/
+.bloqueimghorizontal6 .p2horizontal, .bloqueimghorizontal5 .p2horizontal, .bloqueimghorizontal4 .p2horizontal {
+  position: absolute;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.699);
+  padding: 10px;
+  width: 400px;
+  bottom: 20%;
+  left: 60%;
+}
+
+/*Extend para las imagenes dentro de imghoriaontal clases*/
+.bloqueimghorizontal6 .imghorizontal2, .bloqueimghorizontal6 .imghorizontal, .bloqueimghorizontal5 .imghorizontal2, .bloqueimghorizontal5 .imghorizontal, .bloqueimghorizontal4 .imghorizontal2, .bloqueimghorizontal4 .imghorizontal {
+  position: absolute;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.699);
+  padding: 10px;
+  width: 30%;
+  border-radius: 50%;
+}
+
+/*Mixin de posiciones relativas bottom left*/
 .bloqueimghorizontal2 {
   width: 100%;
   height: auto;
@@ -397,150 +438,54 @@ footer div a {
 }
 
 .bloqueimghorizontal4 {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 500px;
   background-image: url("../multimedia/imagenes/clases/fondocolor3.jpg");
-  background-size: cover;
 }
 .bloqueimghorizontal4 .h2horizontal {
-  position: absolute;
   bottom: 66%;
   left: 67%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  background-color: #fc9dbe;
-  padding: 10px;
-  border: 2px solid #fc9dbe;
-  /* Agrega un borde blanco alrededor del elemento h2 */
-}
-.bloqueimghorizontal4 .p2horizontal {
-  position: absolute;
-  bottom: 20%;
-  left: 60%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 400px;
 }
 .bloqueimghorizontal4 .imghorizontal {
-  position: absolute;
   bottom: 10%;
   left: 26%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
 }
 .bloqueimghorizontal4 .imghorizontal2 {
-  position: absolute;
   bottom: 31%;
   left: 6%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
 }
 
 .bloqueimghorizontal5 {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 500px;
   background-image: url("../multimedia/imagenes/clases/fondocolor4.jpg");
-  background-size: cover;
 }
 .bloqueimghorizontal5 .h2horizontal {
-  position: absolute;
   bottom: 66%;
   left: 67%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  background-color: #fc9dbe;
-  padding: 10px;
-  border: 2px solid #fc9dbe;
-  /* Agrega un borde blanco alrededor del elemento h2 */
-}
-.bloqueimghorizontal5 .p2horizontal {
-  position: absolute;
-  bottom: 20%;
-  left: 60%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 400px;
 }
 .bloqueimghorizontal5 .imghorizontal {
-  position: absolute;
   bottom: 10%;
   left: 26%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
 }
 .bloqueimghorizontal5 .imghorizontal2 {
-  position: absolute;
   bottom: 31%;
   left: 6%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
+  bottom: 31%;
+  left: 6%;
 }
 
 .bloqueimghorizontal6 {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 500px;
   background-image: url("../multimedia/imagenes/clases/fondocolor5.jpg");
-  background-size: cover;
 }
 .bloqueimghorizontal6 .h2horizontal {
-  position: absolute;
   bottom: 66%;
   left: 67%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  background-color: #fc9dbe;
-  padding: 10px;
-  border: 2px solid #fc9dbe;
-  /* Agrega un borde blanco alrededor del elemento h2 */
-}
-.bloqueimghorizontal6 .p2horizontal {
-  position: absolute;
-  bottom: 20%;
-  left: 60%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 400px;
 }
 .bloqueimghorizontal6 .imghorizontal {
-  position: absolute;
   bottom: 2%;
   left: 26%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
 }
 .bloqueimghorizontal6 .imghorizontal2 {
-  position: absolute;
   bottom: 20%;
   left: 6%;
-  z-index: 1;
-  color: rgba(0, 0, 0, 0.699);
-  padding: 10px;
-  width: 30%;
-  border-radius: 50%;
+  bottom: 20%;
 }
 
 /*media queries*/
@@ -700,6 +645,20 @@ footer div a {
   .carousel-inner img {
     height: 150px;
     object-fit: cover;
+  }
+  /*Modificar tamaño del extend para las tarjetas de yoga en clases*/
+  .bloqueimghorizontal4, .bloqueimghorizontal5, .bloqueimghorizontal6 {
+    height: 230px;
+  }
+  /*Modificar el tamaño del ancho del extend del texto en tamaños pequeños para tarjetas de yoga en clases*/
+  .bloqueimghorizontal4 .p2horizontal, .bloqueimghorizontal5 .p2horizontal, .bloqueimghorizontal6 .p2horizontal {
+    width: 150px;
+    bottom: 12%;
+    left: 55%;
+  }
+  /*Modificar el tamaño del ancho de las imagenes en tamaños pequeños para tarjetas de yoga en clases*/
+  .bloqueimghorizontal4 .imghorizontal, .bloqueimghorizontal4 .imghorizontal2, .bloqueimghorizontal5 .imghorizontal, .bloqueimghorizontal5 .imghorizontal2, .bloqueimghorizontal6 .imghorizontal, .bloqueimghorizontal6 .imghorizontal2 {
+    width: 40%;
   }
   footer div {
     flex-wrap: wrap;

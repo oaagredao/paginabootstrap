@@ -1,0 +1,202 @@
+/*media queries*/
+/*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
+@media (min-width: 992px) {
+    main {
+        min-height: 650px;
+
+        div .imgexpandir {
+            object-fit: cover;
+        }
+    }
+    header p {
+        font-size: 2vw;
+    }
+    .logo-small {
+        max-width: 20%;
+        height: auto;
+        min-width: 15%;
+    }
+
+    .contenedormain2 {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
+    footer {
+        p {
+            font-size: 2vw;
+        }
+
+        div a {
+            font-size: 2vw;
+            /*Le coloqué important porque bootstrap tiene prioridad*/
+            font-weight: bold;
+            /*negrita*/
+            color: white;
+        }
+    }
+}
+/*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
+@media (min-width: 320px) and (max-width: 768px) {
+    header p {
+        font-size: small;
+    }
+    .logo-small {
+        max-width: 60%;
+        height: auto;
+    }
+    main {
+        margin-bottom: 2vw;
+
+        h1 {
+            font-size: 7vw;
+        }
+
+        h2 {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 3.5vw;
+        }
+    }
+
+    footer p {
+        font-size: small;
+    }
+    /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
+    .contenedormaingrid {
+        display: flex;
+        flex-wrap: wrap;
+        /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
+        width: 100%;
+    }
+    .gridhijo1 {
+        display: flex;
+        flex-wrap: nowrap;
+        background: linear-gradient(to bottom, #ffffff, #f8a5c2);
+        width: 100%;
+        align-items: center;
+
+        h1 {
+            width: 100%;
+        }
+
+        p {
+            width: 100%;
+        }
+
+    }
+    .contenedormain2 {
+        display: flex;
+        width: 100%;
+        margin: 0 1.5rem;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contenedormain3 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        padding: 1vw;
+    }
+    .contenedortops {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        button {
+            width: 15vw;
+            height: 10vw;
+            margin-left: 1vw;
+            border-radius: 10px;
+
+            a {
+                font-size: 4vw;
+            }
+        }
+
+        img {
+            max-width: 350px;
+            max-height: 150px;
+            width: 50vw;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .listaarticulos {
+        font-size: 4vw;
+    }
+    .boton {
+        width: 20vw;
+        height: 10vw;
+        margin-left: 1vw;
+        background-color: #f590ec;
+        border-color: #ffffff;
+        border-radius: 10px;
+
+        a {
+            color: rgb(0, 0, 0);
+            margin: 0;
+            font-size: 4vw;
+        }
+    }
+    /*carrusel img*/
+    .bloqueimghorizontal {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .imagenhorizontal {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .carousel-inner {
+        img {
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+    /*Modificar tamaño del extend para las tarjetas de yoga en clases*/
+    %bloqueimghorizontal {
+        height: 230px;
+    }
+    /*Modificar el tamaño del ancho del extend del texto en tamaños pequeños para tarjetas de yoga en clases*/
+    %p2horizontalclases {
+        width: 150px;
+        bottom: 12%;
+        left: 55%;
+    }
+    /*Modificar el tamaño del ancho de las imagenes en tamaños pequeños para tarjetas de yoga en clases*/
+    %imghorizontal {
+        width: 40%;
+    }
+    footer {
+        div {
+            flex-wrap: wrap;
+            a {
+                font-size: 5vw;
+            }
+        }
+    }
+}

@@ -376,6 +376,7 @@ footer div a {
     display: inline-block;
     position: relative;
     width: 100%;
+
     .h2horizontal {
         position: absolute;
         bottom: 50%;
@@ -387,6 +388,7 @@ footer div a {
         border: 2px solid $bgcolor1;
         /* Agrega un borde blanco alrededor del elemento h2 */
     }
+
     .h2horizontal2 {
         position: absolute;
         bottom: 15%;
@@ -397,11 +399,11 @@ footer div a {
         padding: 10px;
         /* Agrega un borde blanco alrededor del elemento h2 */
     }
+
     .imagenhorizontal {
         position: relative;
         z-index: -1;
         object-fit: contain;
-
     }
 }
 
@@ -410,23 +412,69 @@ footer div a {
 /*Aqui defino el estilo para sobresalir letras en el slider*/
 .sobresalir {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-
 }
+
 .carousel-inner {
     img {
         height: 450px;
         object-fit: cover;
     }
-
 }
 
 /*Estilos para los bloques que componen la pagina clases*/
+/*Extend de los bloques horizontales clases*/
+%bloqueimghorizontal {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+
+/*Extend para texto dentro del imghorizontal clases*/
+%h2horizontalclases {
+    position: absolute;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.699);
+    background-color: $bgcolor1;
+    padding: 10px;
+    border: 2px solid $bgcolor1;
+}
+
+/*Extende para los p2 dentro del imghorizontal clases*/
+%p2horizontalclases {
+    position: absolute;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.699);
+    padding: 10px;
+    width: 400px;
+    bottom: 20%;
+    left: 60%;
+}
+
+/*Extend para las imagenes dentro de imghoriaontal clases*/
+%imghorizontal {
+    position: absolute;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.699);
+    padding: 10px;
+    width: 30%;
+    border-radius: 50%;
+}
+
+/*Mixin de posiciones relativas bottom left*/
+@mixin posicionesrelativas($bottom,$left){
+    bottom: $bottom;
+    left: $left;
+}
+
 .bloqueimghorizontal2 {
     width: 100%;
     height: auto;
     background-image: url('../multimedia/imagenes/clases/profesor.jpg');
     background-size: cover;
-    a{
+
+    a {
         color: rgba(0, 0, 0, 0.699);
     }
 }
@@ -439,359 +487,79 @@ footer div a {
 }
 
 .bloqueimghorizontal4 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 500px;
+    @extend %bloqueimghorizontal;
     background-image: url('../multimedia/imagenes/clases/fondocolor3.jpg');
-    background-size: cover;
+
     .h2horizontal {
-        position: absolute;
-        bottom: 66%;
-        left: 67%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        background-color: $bgcolor1;
-        padding: 10px;
-        border: 2px solid $bgcolor1;
-        /* Agrega un borde blanco alrededor del elemento h2 */
+        @extend %h2horizontalclases;
+        @include posicionesrelativas(66%,67%);
     }
+
     .p2horizontal {
-        position: absolute;
-        bottom: 20%;
-        left: 60%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 400px;
+        @extend %p2horizontalclases;  
     }
+
     .imghorizontal {
-        position: absolute;
-        bottom: 10%;
-        left: 26%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
+        @extend %imghorizontal;
+        @include posicionesrelativas(10%,26%);
     }
+
     .imghorizontal2 {
-        position: absolute;
-        bottom: 31%;
-        left: 6%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
+        @extend %imghorizontal;
+        @include posicionesrelativas(31%,6%);
     }
-    
+
 }
+
 .bloqueimghorizontal5 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 500px;
+    @extend %bloqueimghorizontal;
     background-image: url('../multimedia/imagenes/clases/fondocolor4.jpg');
-    background-size: cover;
+
     .h2horizontal {
-        position: absolute;
-        bottom: 66%;
-        left: 67%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        background-color: $bgcolor1;
-        padding: 10px;
-        border: 2px solid $bgcolor1;
-        /* Agrega un borde blanco alrededor del elemento h2 */
+        @extend %h2horizontalclases;
+        @include posicionesrelativas(66%,67%);
     }
+
     .p2horizontal {
-        position: absolute;
-        bottom: 20%;
-        left: 60%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 400px;
+        @extend %p2horizontalclases; 
     }
+
     .imghorizontal {
-        position: absolute;
-        bottom: 10%;
-        left: 26%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
+        @extend %imghorizontal;
+        @include posicionesrelativas(10%,26%);
     }
+
     .imghorizontal2 {
-        position: absolute;
+        @extend %imghorizontal;
+        @include posicionesrelativas(31%,6%);
         bottom: 31%;
         left: 6%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
     }
-    
+
 }
+
 .bloqueimghorizontal6 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 500px;
+    @extend %bloqueimghorizontal;
     background-image: url('../multimedia/imagenes/clases/fondocolor5.jpg');
-    background-size: cover;
+
     .h2horizontal {
-        position: absolute;
-        bottom: 66%;
-        left: 67%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        background-color: $bgcolor1;
-        padding: 10px;
-        border: 2px solid $bgcolor1;
-        /* Agrega un borde blanco alrededor del elemento h2 */
+        @extend %h2horizontalclases;
+        @include posicionesrelativas(66%,67%);
     }
+
     .p2horizontal {
-        position: absolute;
-        bottom: 20%;
-        left: 60%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 400px;
+        @extend %p2horizontalclases;
     }
+
     .imghorizontal {
-        position: absolute;
-        bottom: 2%;
-        left: 26%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
+        @extend %imghorizontal;
+        @include posicionesrelativas(2%,26%);
     }
+
     .imghorizontal2 {
-        position: absolute;
+        @extend %imghorizontal;
+        @include posicionesrelativas(20%,6%);
         bottom: 20%;
-        left: 6%;
-        z-index: 1;
-        color: rgba(0, 0, 0, 0.699);
-        padding: 10px;
-        width: 30%;
-        border-radius: 50%;
     }
 }
-
-
-
-/*media queries*/
-/*Aquí cuando se alcanza el tamaño de 900 el tamaño del main es minimo 650px*/
-@media (min-width: 992px) {
-    main {
-        min-height: 650px;
-
-        div .imgexpandir {
-            object-fit: cover;
-        }
-    }
-
-    header p {
-        font-size: 2vw;
-    }
-
-    .logo-small {
-        max-width: 20%;
-        height: auto;
-        min-width: 15%;
-    }
-
-    .contenedormain2 {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    .contenedormain3 {
-        display: flex;
-        width: 100%;
-        margin-bottom: 50px;
-        margin-top: 30px;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        padding: 1vw;
-    }
-
-    footer {
-        p {
-            font-size: 2vw;
-        }
-
-        div a {
-            font-size: 2vw;
-            /*Le coloqué important porque bootstrap tiene prioridad*/
-            font-weight: bold;
-            /*negrita*/
-            color: white;
-        }
-    }
-
-}
-
-/*Aqui voy a cambiar las propiedades de tamaño desde 320 px que corresponde a movile S*/
-@media (min-width: 320px) and (max-width: 768px) {
-    header p {
-        font-size: small;
-    }
-
-    .logo-small {
-        max-width: 60%;
-        height: auto;
-    }
-
-    main {
-        margin-bottom: 2vw;
-
-        h1 {
-            font-size: 7vw;
-        }
-
-        h2 {
-            font-size: 5vw;
-        }
-
-        p {
-            font-size: 3.5vw;
-        }
-    }
-
-    footer p {
-        font-size: small;
-    }
-
-    /*colocaré las caracteristicas de media queries para modificar el tamaño de la pagina ropa*/
-    .contenedormaingrid {
-        display: flex;
-        flex-wrap: wrap;
-        /*el primer hijo ocupará 2/5 y el segundo un 3/5*/
-        width: 100%;
-    }
-
-    .gridhijo1 {
-        display: flex;
-        flex-wrap: nowrap;
-        background: linear-gradient(to bottom, #ffffff, #f8a5c2);
-        width: 100%;
-        align-items: center;
-
-        h1 {
-            width: 100%;
-        }
-
-        p {
-            width: 100%;
-        }
-
-    }
-
-    .contenedormain2 {
-        display: flex;
-        width: 100%;
-        margin: 0 1.5rem;
-        margin-bottom: 50px;
-        margin-top: 30px;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .contenedormain3 {
-        display: flex;
-        width: 100%;
-        margin-bottom: 50px;
-        margin-top: 30px;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        padding: 1vw;
-    }
-
-    .contenedortops {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-
-        button {
-            width: 15vw;
-            height: 10vw;
-            margin-left: 1vw;
-            border-radius: 10px;
-
-            a {
-                font-size: 4vw;
-            }
-        }
-
-        img {
-            max-width: 350px;
-            max-height: 150px;
-            width: 50vw;
-            height: auto;
-            object-fit: cover;
-        }
-    }
-
-    .listaarticulos {
-        font-size: 4vw;
-    }
-
-    .boton {
-        width: 20vw;
-        height: 10vw;
-        margin-left: 1vw;
-        background-color: #f590ec;
-        border-color: #ffffff;
-        border-radius: 10px;
-
-        a {
-            color: rgb(0, 0, 0);
-            margin: 0;
-            font-size: 4vw;
-        }
-    }
-
-
-    /*carrusel img*/
-    .bloqueimghorizontal {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        height: auto;
-
-        .imagenhorizontal {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    .carousel-inner {
-        img {
-            height: 150px;
-            object-fit: cover;
-        }
-    }
-
-    footer {
-        div {
-            flex-wrap: wrap;
-
-            a {
-                font-size: 5vw;
-            }
-        }
-
-    }
-
-}
+@import "mediaqueries";
