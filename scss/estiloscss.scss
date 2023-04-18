@@ -154,14 +154,11 @@ footer div a {
         color: rgb(7, 90, 214);
     }
 }
-
 .contenedormainsinmargin {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
-
 /*Contenedores de porque meditar index, contenedor principal de main que agrupa en la misma fila*/
 .contenedormain2 {
     display: flex;
@@ -171,7 +168,6 @@ footer div a {
     justify-content: center;
     flex-wrap: nowrap;
 }
-
 /*Contenedor hijo que agrupa elementos en columna*/
 .contenedorhijo1 {
     display: flex;
@@ -183,7 +179,6 @@ footer div a {
         color: rgb(74, 138, 233);
     }
 }
-
 /*Colocaré los contenedores  para la pagina ropa*/
 /*Este contenedor grid contiene las secciones de clasificacion horizontal de ropa al inicio*/
 .contenedormaingrid {
@@ -193,7 +188,6 @@ footer div a {
     width: 100%;
     max-height: 100%;
 }
-
 /*Contenedor que tiene el titulo de ropa, agrupa en columna*/
 .gridhijo1 {
     display: flex;
@@ -210,8 +204,6 @@ footer div a {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
-
-
 /*contenedor que agrupa elementos en columna, pero tendrá más contenedores*/
 .gridhijo2 {
     display: flex;
@@ -239,7 +231,6 @@ footer div a {
         height: auto;
     }
 }
-
 /*Aqui se cambia el color de fondo de los contenedores principales de ropa*/
 .contenedorropa1 {
     background: linear-gradient(to left, #ffffff, $bgcolor2);
@@ -249,7 +240,6 @@ footer div a {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
 }
-
 /*Aqui haré los contenedores para agrupar las imagenes de ropa en dos columnas*/
 .contenedortops {
     display: flex;
@@ -284,13 +274,10 @@ footer div a {
         object-fit: cover;
     }
 }
-
 /*Le coloco color de fonto al titulo de tops en la seccion tops*/
 .colorfondotitulotop {
     background-color: $bgcolor1;
 }
-
-
 /*Clase contenedor que da el borde inferior azul*/
 .contenedormainbordeinferior1 {
     border-bottom: 50px solid $bgcolor3;
@@ -300,14 +287,11 @@ footer div a {
     padding-bottom: 5rem;
     border-bottom: 50px solid $bgcolor1;
 }
-
 /*Voy a crear la tarjeta para articulos*/
-
 /*Crear una clase para agrupar los objetos en un div de articulos*/
 .agrupar{
     height: 200px;
 }
-
 /*Boton de articulos*/
 .boton {
     width: 10vw;
